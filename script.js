@@ -67,9 +67,9 @@ function navAnimation() {
 
         tl.to("#nav-bottom", {
             height: "21vh",
-            duration: 0.5
+            duration: 0.3
         })
-        tl.to(".nav-part2 h5", {
+        tl.to(".nav-elem h5", {
             display: "block",
             duration: 0.1
 
@@ -78,7 +78,7 @@ function navAnimation() {
             y: 0,
             // duration:0.3,
             stagger: {
-                amount: 0.5
+                amount: 0.3
             }
         })
     })
