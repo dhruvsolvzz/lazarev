@@ -5,6 +5,13 @@
     font-family: gilroy;
     color: #fff;
 }
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:wght@400;700&display=swap');
+.zalando-font {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* or 700 for bold */
+  font-style: normal;
+}
 
 html,
 body {
@@ -26,7 +33,15 @@ nav {
 }
 
 nav h1 {
-    font-size: 1.6vw;
+  font-size: 1.6vw;
+  transition: all 0.3s ease; /* smooth animation */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ 
+}
+
+nav h1:hover {
+  font-style: italic;
+ font-family : 'Zalando Sans Expanded', sans-serif; /* optional — change font style */
 }
 
 .nav-part2 {

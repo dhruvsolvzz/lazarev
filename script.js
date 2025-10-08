@@ -67,7 +67,7 @@ function navAnimation() {
 
         tl.to("#nav-bottom", {
             height: "21vh",
-            duration: 0.3
+            duration: 0.5
         })
         tl.to(".nav-elem h5", {
             display: "block",
