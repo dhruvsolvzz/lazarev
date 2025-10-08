@@ -182,15 +182,49 @@ function page6Animations() {
         }
     })
 }
+function initCounters() {
+  const counters = document.querySelectorAll(".counter");
 
-locomotiveAnimation()
+  const runCounter = (counter) => {
+    const target = +counter.dataset.target;
+    const suffix = counter.dataset.suffix || "";
+    let count = 0;
+    const duration = 2000;
+    const increment = target / (duration / 20);
 
-navAnimation()
+    const update = () => {
+      count += increment;
+      if (count < target) {
+        counter.textContent = Math.floor(count).toLocaleString() + suffix;
+        setTimeout(update, 20);
+      } else {
+        counter.textContent = target.toLocaleString() + suffix;
+      }
+    };
+    update();
+  };
 
-page2Animation()
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          counters.forEach(runCounter);
+          obs.disconnect();
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
 
-page3VideoAnimation()
+  observer.observe(document.querySelector(".achievements"));
+}
 
-page6Animations()
-
-loadingAnimation()
+window.addEventListener("load", () => {
+  locomotiveAnimation();
+  loadingAnimation();
+  navAnimation();
+  page2Animation();
+  page3VideoAnimation();
+  page6Animations();
+  initCounters();
+});

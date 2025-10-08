@@ -102,11 +102,21 @@ nav button svg {
 }
 
 #page1 h1 {
-    font-size: 8.5vw;
-    text-transform: uppercase;
-    font-weight: 900;
-    line-height: 8.5vw;
+  font-size: 6vw;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 8.5vw;
+  padding-left: 5vw;
+  color: white;
+
+  /* Fade from left to right */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
+
 
 #page1 h1 svg {
     height: 6vw;
@@ -231,13 +241,13 @@ nav button svg {
 }
 
 #page2-left p {
-    font-size: 0.8vw;
+    font-size: 3vw;
 }
 
 #page2-left h5 {
     width: 75%;
     font-weight: 400;
-    font-size: 1.1vw;
+    font-size: 1.5vw;
 }
 
 
@@ -276,7 +286,7 @@ nav button svg {
     width: 100%;
     background-color: #111;
     position: relative;
-    background-image: url(https://lazarev.kiev.ua/la24/reel-cover.webp);
+    background-image: url(./nano-banana-2025-10-08T04-48-07.png);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -429,7 +439,7 @@ nav button svg {
 }
 
 #page5-right > p {
-    font-size: 2.1vw;
+    font-size: 1.5vw;
 }
 
 #page5-right > p span {
@@ -467,7 +477,7 @@ nav button svg {
 
 .page5-elem {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     /* background-color: red; */
     /* padding: 2vh 0; */
@@ -673,9 +683,9 @@ summary::marker {
 .btm6-parts h4 {
     background-color: #111;
     width: 75%;
-    padding: 5px 10px;
+    padding: 5px 8px;
     margin-bottom: 0.3vh;
-    border-radius: 50px;
+    border-radius: 20px;
     font-size: 0.85vw;
     display: flex;
     align-items: center;
@@ -691,7 +701,7 @@ summary::marker {
     height: 1.5vw;
     background-color: #333;
     padding: 0.5vw;
-    border-radius: 50%;
+    border-radius: 20%;
     margin-right: 1vw;
 }
 #btm6-part2 h4:nth-child(2){
@@ -715,6 +725,78 @@ summary::marker {
 
 
 #page7 {
-    height: 100vh;
+    height: auto;
     background-color: #111;
+}
+.achievements {
+  background: linear-gradient(#111111 30%, White);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.achievements h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.achievements p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  background-color: white;
+  color: #0056A3;
+  width: 230px;
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.counter {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.card span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 80%;
+  }
 }
